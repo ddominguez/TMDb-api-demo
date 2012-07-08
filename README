@@ -1,0 +1,7 @@
+A web app that displays movies that are currently playing.
+Includes tmdb api wrapper.
+
+Built with:
+1. TMDB API version 3
+2. Python 2.7
+3. Flask 0.8
