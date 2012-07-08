@@ -1,0 +1,83 @@
+body, div, ol, ul, li,
+h1, h2, h3, h4, span {
+    font: 100% verdana,sans-serif;
+    padding: 0px;
+    margin: 0px;
+    cursor: default;
+    background-color:#eee;
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+#container {
+    /*border: 1px solid #bbb;*/
+    margin: 10px auto;
+    width: 960px;
+    overflow: auto;
+}
+
+#header {
+    margin: 0 0 10px 0;
+}
+
+#header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#header a:hover {
+    text-decoration: underline;
+}
+
+/* now playing styles */
+#movie-thumbs {
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.movie-thumb {
+    border: 1px solid #333;
+    width: 154px;
+    line-height: 0;
+    float: left;
+    margin:0 50px 10px 0;
+}
+
+.movie-thumb:nth-child(4n) {
+    margin-right: 0;
+}
+
+.movie-thumb:nth-child(4n+1) {
+    clear: both;
+}
+
+/* movie info styles */
+#movie #poster {
+    float: left;
+    margin-right: 10px;
+    width: 342px;
+}
+
+#movie #content {
+    float: left;
+    width: 600px;
+}
+
+#cast {
+    margin: 10px 0 0 0;
+}
+
+#cast ul li {
+    display: inline;
+}
+
+#cast ul li:after {
+    content: ",";
+}
+
+#cast ul li:last-child:after {
+    content: none;
+}
