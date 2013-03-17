@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 from flask import Flask, render_template
 import tmdb
 import settings
@@ -27,4 +28,7 @@ def inject_globals():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run()
+    # app.run()
+    # Bind to PORT if defined, otherwise default to 5000.
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
