@@ -1,12 +1,14 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div id="movie-thumbs">
-    {% for movie in movies.results %}
-        <div class="movie-thumb">
-            <a href="{{ url_for('movie', id=movie.id) }}">
-                <img src="{{urls.poster.w154}}{{movie.poster_path}}" />
-            </a>
-        </div>
-    {% endfor %}
+    <div class="row">
+        <ul id="movie-thumbnails" class="thumbnails">
+        {%- for movie in movies.results %}
+            <li class="span3">
+                <a href="{{ url_for('movie', id=movie.id) }}" class="thumbnail" title="{{movie.title}}">
+                    <img src="{{urls.poster.w154}}{{movie.poster_path}}" />
+                </a>
+            </li>
+        {%- endfor %}
+        </ul>    
     </div>
 {% endblock %}

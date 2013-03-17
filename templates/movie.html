@@ -1,17 +1,16 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div id="movie">
-    {% if movie %}
-        <img id="poster" src="{{urls.poster.w342}}{{movie.poster_path}}" alt="{{movie.title}}" />
-        <div id="content">
-            <h1>{{movie.title}}</h1>
-            <div id="overview">
-                {{movie.overview}}
-            </div>
+    <div class="row">
+        <div class="span3">
+            <img id="poster" src="{{urls.poster.w185}}{{movie.poster_path}}" alt="{{movie.title}}" />
+        </div>
+        <div class="span9">
+            <h1 class="page-header">{{movie.title}}</h1>
+            <p class="lead">{{movie.overview}}</p>
             {% if cast['cast'] %}
             <div id="cast">
-                <h2>Cast</h2>
-                <ul>
+                <h3>Cast</h3>
+                <ul class="inline">
                 {%- for c in cast['cast'] %}
                     <li>{{c['name']}}</li>
                 {%- endfor %}
@@ -19,8 +18,5 @@
             </div>
             {% endif %}
         </div>
-    {% else %}
-        Movie not found.
-    {% endif %}
     </div>
 {% endblock %}
