@@ -4,4 +4,4 @@ Includes tmdb api wrapper.
 Built with:
 1. TMDB API version 3
 2. Python 2.7.2
-3. Flask 0.8
+3. Flask 0.9
