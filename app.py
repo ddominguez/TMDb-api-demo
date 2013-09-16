@@ -22,9 +22,14 @@ def movie(id=None):
         cast = themoviedb.movie_casts(id)
     return render_template('movie.html', movie=movie, cast=cast)
 
+@app.route('/person/<id>')
+def person(id):
+    person = themoviedb.person_info(id)
+    return render_template('person.html', person=person)
+
 @app.context_processor
 def inject_globals():
-    return dict(urls = themoviedb.image_urls)
+    return dict(urls=themoviedb.image_urls)
 
 if __name__ == "__main__":
     app.debug = True
