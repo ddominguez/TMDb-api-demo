@@ -5,3 +5,34 @@ body {
 #movie-thumbnails li a {
     height: 231px;
 }
+
+.modal {
+    display: block;
+    /*border: 1px solid #333;*/
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    z-index: 1000;
+    -webkit-box-shadow: 0 0 10px #444;
+    -moz-box-shadow: 0 0 10px #444;
+    -o-box-shadow: 0 0 10px #444;
+    box-shadow: 0 0 10px #444;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.modal > div {
+    margin: 10px;
+    max-height: 300px;
+}
+
+.modal-back {
+    display: block;
+    background-color:rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
